@@ -110,7 +110,7 @@ export const getApi = (apiKey: string, apiSecret: string, otpParam?: string) => 
 
   const otp = (otpParam && otpParam) || process.env.OTP_KRAKEN;
 
-  return async (methodName: PublicMethodName | PrivateMethodSet, methodParams: { [k: string]: any; } = {}) => {
+  return async (methodName: PublicMethodName | PrivateMethodName, methodParams: { [k: string]: any; } = {}) => {
     const methodType = getMethodType(methodName);
     if(methodType === undefined) {
       throw new Error(methodName + ' is not a valid API method.');
