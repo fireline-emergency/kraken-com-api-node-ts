@@ -1,3 +1,5 @@
+This package is the same as https://github.com/gbili/kraken-com-api-node-ts#readme but instead of using .env for API key, secret and OTP it allows the parameters to be added dynamically in the getApi function call.
+
 # NodeJS Kraken.com API Typescript
 
 NodeJS Client Library for the Kraken (kraken.com) API
@@ -7,17 +9,7 @@ This is an asynchronous node javascript/typescript client for the kraken.com API
 ## Installation
 
 ```bash
-npm install kraken-com-api-node-ts
-```
-
-## Setup
-
-You need to save your keys in a `.env` file
-
-```env
-API_KEY=yourapikey
-API_SECRET=asecret
-OPT_KRAKEN=123456
+npm install kraken-com-api-node-ts-dynamic-keys
 ```
 
 ## Example Usage
@@ -26,9 +18,9 @@ OPT_KRAKEN=123456
 import getApi from 'kraken-com-api-node-ts';
 
 // without 2fa
-const api = getApi();
+const api = getApi('api key', 'api secret');
 // or with 2fa
-const api = getApi('345690');
+const api = getApi('api key', 'api secret', '345690');
 
 (async () => {
   // Display user's balance
