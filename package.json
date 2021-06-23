@@ -1,6 +1,6 @@
 {
   "name": "@viodyn/kraken-com-api-node-ts-dynamic-keys",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "This package is the same as https://github.com/gbili/kraken-com-api-node-ts#readme but instead of using .env for API key, secret and OTP it allows the parameters to be added dynamically in the getApi function call.",
   "main": "./build/kraken.d.ts",
   "scripts": {
@@ -8,7 +8,10 @@
     "build": "tsc"
   },
   "files": [
-    "build"
+    "build",
+    "kraken.ts",
+    "package.json",
+    "tsconfig.json"
   ],
   "repository": {
     "type": "git",
