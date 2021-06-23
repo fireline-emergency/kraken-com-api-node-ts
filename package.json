@@ -36,6 +36,10 @@
     "url": "https://github.com/gbili/kraken-com-api-node-ts/issues",
     "email": "mail@guillermo.at"
   },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
   "readmeFilename": "README.md",
   "devDependencies": {}
 }

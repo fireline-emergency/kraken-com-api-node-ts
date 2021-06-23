@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import got, { OptionsOfTextResponseBody } from 'got';
 import crypto from 'crypto';
 import qs from 'qs';
@@ -102,9 +101,9 @@ async function makeRequest(url: string, headers: Record<keyof (PublicRequestHead
   return response.result;
 };
 
-export const getApi = (otpParam?: string) => {
-  const key: string | undefined = process.env.API_KEY;
-  const secret: string | undefined = process.env.API_SECRET;
+export const getApi = (apiKey: string, apiSecret: string, otpParam?: string) => {
+  const key: string | undefined = apiKey;
+  const secret: string | undefined = apiSecret;
   if (key === undefined || secret === undefined) {
     throw new Error('Could not find or load .env.API_KEY or .env.API_SECRET');
   }
